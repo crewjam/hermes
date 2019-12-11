@@ -302,7 +302,7 @@ func (dt *Default) HTMLTemplate() string {
                     {{ with .Email.Body.Intros }}
                         {{ if gt (len .) 0 }}
                           {{ range $line := . }}
-                            <p>{{ $line }}</p>
+                            <p>{{ $line.ToHTML }}</p>
                           {{ end }}
                         {{ end }}
                     {{ end }}
@@ -441,7 +441,7 @@ func (dt *Default) HTMLTemplate() string {
                     {{ with .Email.Body.Outros }} 
                         {{ if gt (len .) 0 }}
                           {{ range $line := . }}
-                            <p>{{ $line }}</p>
+                            <p>{{ $line.ToHTML }}</p>
                           {{ end }}
                         {{ end }}
                       {{ end }}
