@@ -181,6 +181,11 @@ func (dt *Default) HTMLTemplate() string {
     p.center {
       text-align: center;
     }
+    li {
+      color: #74787E;
+      font-size: 16px;
+      line-height: 1.5em;
+    }
     table {
       width: 100%;
     }
@@ -449,7 +454,8 @@ func (dt *Default) HTMLTemplate() string {
                     <p>
                       {{.Email.Body.Signature}},
                       <br />
-                      {{.Hermes.Product.Name}}
+                      <br />
+                      The {{.Hermes.Product.Name}} Team
                     </p>
 
                     {{ if (eq .Email.Body.FreeMarkdown "") }}
